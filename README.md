@@ -204,3 +204,17 @@ If the training accuracy improved while the validation accuracy plateaued or dro
 If both accuracies increased steadily, this indicated that the model was effectively learning and generalizing to new data.
 Similarly, loss curves were analysed to ensure that the model was minimizing errors over time. A significant gap between training and validation loss would also suggest overfitting. In contrast, a consistent reduction in both training and validation loss would indicate proper learning and model optimization.
 These plots provided a clear overview of the model’s performance during the training process, guiding decisions on potential adjustments such as modifying the number of epochs, tweaking regularization parameters, or fine-tuning the learning rate for better generalization. 
+
+
+5.	Results
+5.1 Presentation of Data
+
+Image/Video Deepfake Detection Model Layer
+Layer(type)	Output Shape	Param #
+Xception(Functional)	?	20,861,480
+global_average_pooling2d	?	0
+Dense	?	0
+Trainable params	?	20,806,952 (79.37MB)
+Non-trainable params	?	54,528 (213.00 KB)
+
+Image/Video Deepfake Detection Model Graph Representation
