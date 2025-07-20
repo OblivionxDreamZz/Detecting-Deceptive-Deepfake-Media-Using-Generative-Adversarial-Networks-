@@ -206,6 +206,7 @@ Similarly, loss curves were analysed to ensure that the model was minimizing err
 These plots provided a clear overview of the model’s performance during the training process, guiding decisions on potential adjustments such as modifying the number of epochs, tweaking regularization parameters, or fine-tuning the learning rate for better generalization. 
 
 =================================================================================
+
 Results
 
 Presentation of Data
