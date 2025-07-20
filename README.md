@@ -205,7 +205,7 @@ If both accuracies increased steadily, this indicated that the model was effecti
 Similarly, loss curves were analysed to ensure that the model was minimizing errors over time. A significant gap between training and validation loss would also suggest overfitting. In contrast, a consistent reduction in both training and validation loss would indicate proper learning and model optimization.
 These plots provided a clear overview of the model’s performance during the training process, guiding decisions on potential adjustments such as modifying the number of epochs, tweaking regularization parameters, or fine-tuning the learning rate for better generalization. 
 
-
+============================================================================================================================================
 Results
 
 Presentation of Data
