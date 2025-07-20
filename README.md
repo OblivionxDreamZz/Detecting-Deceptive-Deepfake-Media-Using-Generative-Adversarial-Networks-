@@ -206,15 +206,92 @@ Similarly, loss curves were analysed to ensure that the model was minimizing err
 These plots provided a clear overview of the model’s performance during the training process, guiding decisions on potential adjustments such as modifying the number of epochs, tweaking regularization parameters, or fine-tuning the learning rate for better generalization. 
 
 
-5.	Results
-5.1 Presentation of Data
+Results
 
-Image/Video Deepfake Detection Model Layer
-Layer(type)	Output Shape	Param #
-Xception(Functional)	?	20,861,480
-global_average_pooling2d	?	0
-Dense	?	0
-Trainable params	?	20,806,952 (79.37MB)
-Non-trainable params	?	54,528 (213.00 KB)
+Presentation of Data
 
-Image/Video Deepfake Detection Model Graph Representation
+<img width="940" height="365" alt="image" src="https://github.com/user-attachments/assets/f5432da9-fbaf-46d5-9186-f591c602ffed" />
+Figure 1: Model graph representation
+
+Image/Video Deepfake Detection Representation
+<img width="940" height="412" alt="image" src="https://github.com/user-attachments/assets/dd5d9256-3eb8-48ac-8584-c84aaf9a23f6" />
+
+Figure 2: Deepfake detection representation image fake
+
+<img width="940" height="420" alt="image" src="https://github.com/user-attachments/assets/4425722d-f4d0-48ea-b258-ad728168d400" />
+ 
+Figure 3: Deepfake detection representation image real(2)
+
+Figure 4: Deepfake detection representation image real(3)
+ 
+Figure 5: Deepfake detection representation image real(4)
+
+<img width="940" height="413" alt="image" src="https://github.com/user-attachments/assets/a8c3d4ad-8dbc-4f43-94c3-152d33078121" />
+
+Figure 6: Deepfake detection representation video
+
+<img width="940" height="418" alt="image" src="https://github.com/user-attachments/assets/6c7115f9-e7ae-4722-8c7c-027be4bdc1bd" />
+
+Figure 7: Deepfake detection representation image video(2)
+
+
+Audio Deepfake Detection Model Evaluation Matrix
+	            Precision	Recall	F1-Score	Support
+0	            0.77	    0.91	  0.83	    11
+1	            0.90	    0.75	  0.82	    12
+Accuracy			                  0.83	    23
+Macro avg	    0.83	    0.83	  0.83	    23
+Weighted avg	0.84	    0.83	  0.83	    23
+
+
+Audio Deepfake Detection Model Evaluation Matrix Graph Representation
+<img width="933" height="350" alt="image" src="https://github.com/user-attachments/assets/3eee997b-0823-4d3a-bb84-6ba07e147af7" />
+ 
+Figure 8: Model graph representation audio
+
+Real Audio Analysis
+
+<img width="919" height="318" alt="image" src="https://github.com/user-attachments/assets/b3133cca-3cfd-489a-b07d-febd3f0f5bb4" />
+
+Figure 9: Real audio wave length
+
+<img width="963" height="389" alt="image" src="https://github.com/user-attachments/assets/dec25f7d-ba7a-4e71-8587-ebc5d18f04ef" />
+Figure 10: Real audio spectogram
+
+<img width="926" height="382" alt="image" src="https://github.com/user-attachments/assets/2452efb4-897b-4d2d-abbb-fcd779efaa7b" />
+Figure 11: Real audio mel spectrogram
+
+Fake Audio Analysis
+<img width="933" height="372" alt="image" src="https://github.com/user-attachments/assets/29be2d68-b091-4d83-89ab-feb70e72658f" />
+Figure 12: Fake audio wave length
+
+<img width="930" height="394" alt="image" src="https://github.com/user-attachments/assets/c04c0f02-5735-42b3-b6f5-58345325b060" />
+Figure 13: Fake audio spectogram
+
+<img width="930" height="386" alt="image" src="https://github.com/user-attachments/assets/18276b5a-0ff0-4396-9d97-de389a6000ea" /> 
+Figure 14: Fake audio mel spectrogram
+
+Audio Deepfake Detection Representation
+
+<img width="942" height="415" alt="image" src="https://github.com/user-attachments/assets/1f08969d-4e72-4ef2-93f4-0b805004eef8" /> 
+Figure 15: Deepfake detection representation audio(fake)
+
+<img width="940" height="416" alt="image" src="https://github.com/user-attachments/assets/0d4d5e27-851f-4731-943d-9b86a89e20f6" />
+Figure 16: Deepfake detection representation audio(real)
+
+Convolutional Neural Network Architecture 
+
+<img width="928" height="374" alt="image" src="https://github.com/user-attachments/assets/8fc53253-8e1d-4daf-a19e-6bb136041931" /> 
+Figure 17: Multilayer Convolutional Neural Network Architecture
+
+Confidence Level Calculation
+
+Confidence Calculation:
+
+-	If prediction[0][0] >= 0.5: The result is "Fake".
+-	If prediction[0][0] < 0.5: The result is "Real".
+Confidence Calculation:
+-	If the result is "Fake": confidence=prediction[0][0]\text{confidence} = \text{prediction}[0][0]confidence=prediction[0][0]
+-	If the result is "Real": confidence=1−prediction[0][0]\text{confidence} = 1 - \text{prediction}[0][0]confidence=1−prediction[0][0]
+
+
